@@ -1,22 +1,113 @@
+﻿* {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+    .btn:hover {
+        background: linear-gradient(135deg, #0083b0, #005c78);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn:focus, .btn:active:focus,
+    .btn-link.nav-link:focus,
+    .form-control:focus,
+    .form-check-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem #00b4db;
+    }
+
+/* Posicionamiento del carousel */
+.botones {
+    text-align: center;
+    gap: 70px;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.div_imagen {
+    height: 700px;
+    overflow: hidden;
+}
+
+.imagen {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+    .imagen:hover {
+        transform: scale(1.03);
+    }
+
+/* Caption del carousel */
+h5, #leyenda {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+}
+
+.datos {
+    width: 80px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
 }
